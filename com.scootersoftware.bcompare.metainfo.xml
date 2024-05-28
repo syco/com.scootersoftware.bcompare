@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.scootersoftware.bcompare</id>
+  <name>Beyond Compare</name>
+  <project_license>GPL-3.0+</project_license>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Beyond Compare</summary>
+  <developer>
+    <name>Bicom Systems</name>
+  </developer>
+  <description>
+    <p>
+      Beyond Compare is a software application used by developers, system administrators and others to compare, merge, and synchronize data.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">com.scootersoftware.bcompare.desktop</launchable>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://www.scootersoftware.com/shot_TextCompare_Dark.png</image>
+    </screenshot>
+  </screenshots>
+
+  <url type="homepage">https://www.scootersoftware.com</url>
+  <url type="bugtracker">https://www.scootersoftware.com</url>
+  <url type="help">https://www.scootersoftware.com</url>
+
+  <provides>
+    <binary>bcompare</binary>
+  </provides>
+
+  <releases>
+    <release version="4.4.7" date="2023-10-19" />
+  </releases>
+
+  <content_rating type="oars-1.1" />
+</component>

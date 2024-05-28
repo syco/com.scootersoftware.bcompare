@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Beyond Compare
+GenericName=Beyond Compare
+Comment=Beyond Compare is a software application used by developers, system administrators and others to compare, merge, and synchronize data
+X-GNOME-FullName=Beyond Compare
+Type=Application
+Exec=/app/bin/bcompare %u
+Icon=com.scootersoftware.bcompare
+StartupWMClass=Beyond Compare
+StartupNotify=false
+Terminal=false
+Categories=Qt;Network;Telephony;

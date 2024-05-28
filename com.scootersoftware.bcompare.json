@@ -1,0 +1,73 @@
+{
+  "id": "com.scootersoftware.bcompare",
+  "command": "/app/bin/bcompare",
+  "separate-locales": false,
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "23.08",
+  "sdk": "org.freedesktop.Sdk",
+  "finish-args": [
+    "--device=all",
+    "--filesystem=home",
+    "--share=ipc",
+    "--socket=x11"
+  ],
+  "modules": [
+    {
+      "name": "libbz2",
+      "no-autogen": true,
+      "make-args": [
+        "--f=Makefile-libbz2_so",
+        "PREFIX=/app"
+      ],
+      "no-make-install": true,
+      "post-install": [
+        "mkdir -p /app/lib",
+        "mv -v libbz2.so.1.0.8 /app/lib",
+        "ln -s /app/lib/libbz2.so.1.0.8 /app/lib/libbz2.so.1.0"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz",
+          "sha256": "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269"
+        }
+      ]
+    },
+    {
+      "name": "bcompare",
+      "sources": [
+        {
+          "type": "file",
+          "url": "https://www.scootersoftware.com/files/bcompare-4.4.7.28397_amd64.deb",
+          "dest-filename": "bcompare.deb",
+          "sha256": "e005934a86295611a6041c5cc075dd83508677fd38fbcc8bf69bbe807aec8fa5"
+        },
+        {
+          "type": "file",
+          "path": "com.scootersoftware.bcompare.desktop"
+        },
+        {
+          "type": "file",
+          "path": "com.scootersoftware.bcompare.png"
+        },
+        {
+          "type": "file",
+          "path": "com.scootersoftware.bcompare.metainfo.xml"
+        }
+      ],
+      "buildsystem": "simple",
+      "build-commands": [
+        "ar vx bcompare.deb",
+        "tar vxf data.tar.gz --strip-components=2 -C /app",
+        "rm -f bcompare.deb control.tar.gz data.tar.gz debian-binary",
+        "sed -i 's;/usr/lib/beyondcompare;/app/lib/beyondcompare;g' /app/bin/bcompare"
+      ],
+      "post-install": [
+        "install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml",
+        "install -Dm644 ${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop",
+        "install -Dm644 ${FLATPAK_ID}.png /app/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png",
+        "install -Dm644 ${FLATPAK_ID}.png /app/usr/share/icons/${FLATPAK_ID}.png"
+      ]
+    }
+  ]
+}
