@@ -5,8 +5,8 @@
   <project_license>GPL-3.0+</project_license>
   <metadata_license>CC0-1.0</metadata_license>
   <summary>Beyond Compare</summary>
-  <developer>
-    <name>Bicom Systems</name>
+  <developer id="com.scootersoftware">
+    <name>Beyond Compare</name>
   </developer>
   <description>
     <p>
@@ -31,6 +31,8 @@
   </provides>
 
   <releases>
+    <release version="5.0.1" date="2024-07-19" />
+    <release version="5.0.0" date="2024-07-08" />
     <release version="4.4.7" date="2023-10-19" />
   </releases>
 
