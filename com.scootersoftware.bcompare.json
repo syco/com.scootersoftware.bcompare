@@ -38,9 +38,9 @@
       "sources": [
         {
           "type": "file",
-          "url": "https://www.scootersoftware.com/files/bcompare-5.0.3.30258_amd64.deb",
+          "url": "https://www.scootersoftware.com/files/bcompare-5.0.4.30422_amd64.deb",
           "dest-filename": "bcompare.deb",
-          "sha256": "715d47786ef503b67bc98eb23ac86c6e680ada19d2e0f2fd634204de0f99ac91"
+          "sha256": "1e9282dfebc678720a13e745dbaa9687d9b9b6c8060939a582c502ec46bed540"
         },
         {
           "type": "file",
