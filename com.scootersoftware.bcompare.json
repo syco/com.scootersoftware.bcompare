@@ -40,7 +40,7 @@
           "type": "file",
           "url": "https://www.scootersoftware.com/files/bcompare-5.1.0.31016_amd64.deb",
           "dest-filename": "bcompare.deb",
-          "sha256": "214842785d2fdd8c80ac99847a98e883160bff2eaabae7665ac462c3207cedf5"
+          "sha256": "2e9bf178e7d018016cd42b214717eb62e38aff877b4220165e88ec24cb55172d"
         },
         {
           "type": "file",
