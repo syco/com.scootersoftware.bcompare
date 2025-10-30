@@ -3,7 +3,7 @@
   "command": "/app/bin/bcompare",
   "separate-locales": false,
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.15-24.08",
+  "runtime-version": "5.15-25.08",
   "sdk": "org.kde.Sdk",
   "finish-args": [
     "--device=all",
@@ -38,9 +38,9 @@
       "sources": [
         {
           "type": "file",
-          "url": "https://www.scootersoftware.com/files/bcompare-5.1.5.31310_amd64.deb",
+          "url": "https://www.scootersoftware.com/files/bcompare-5.1.6.31527_amd64.deb",
           "dest-filename": "bcompare.deb",
-          "sha256": "f28f2b3a607f1863a4e77da483776510c6abcc876fbe6566075d9ca11956df7e"
+          "sha256": "c10711293af60707b88c3cd2624a18b914d999af0d0ff9acff5d2949ec4d798c"
         },
         {
           "type": "file",
