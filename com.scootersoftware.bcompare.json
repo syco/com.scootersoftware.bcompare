@@ -34,13 +34,61 @@
       ]
     },
     {
+      "name" : "uthash",
+      "buildsystem" : "simple",
+      "build-commands" : [
+        "install -D include/* /app/include"
+      ],
+      "sources" : [
+        {
+          "type" : "git",
+          "url" : "https://github.com/troydhanson/uthash.git",
+          "commit" : "6d8573997c21f24c7e4ec9e48734b44f384170a1"
+        }
+      ]
+    },
+    {
+      "name" : "libdicom",
+      "builddir" : true,
+      "buildsystem" : "meson",
+      "config-opts" : [
+        "--buildtype=release",
+        "--libdir=lib",
+        "-Dtests=false"
+      ],
+      "sources" : [
+        {
+          "type" : "git",
+          "url" : "https://github.com/ImagingDataCommons/libdicom.git",
+          "tag" : "v1.3.0",
+          "commit" : "8c84fdbef433395619f3b099e939d36877a9d48f"
+        }
+      ]
+    },
+    {
+      "name" : "openslide",
+      "builddir" : true,
+      "buildsystem" : "meson",
+      "config-opts" : [
+        "--libdir=lib",
+        "--buildtype=release"
+      ],
+      "sources" : [
+        {
+          "type" : "archive",
+          "url" : "https://github.com/openslide/openslide/releases/download/v4.0.1/openslide-4.0.1.tar.xz",
+          "sha256" : "df82f6b264f98d11eeb80d85bbb10c7935fcd69c7abae1d610ce49b9a0437faf"
+        }
+      ]
+    },
+    {
       "name": "bcompare",
       "sources": [
         {
           "type": "file",
-          "url": "https://www.scootersoftware.com/files/bcompare-5.2.3.32296_amd64.deb",
+          "url": "https://www.scootersoftware.com/files/bcompare-5.2.6.32774_amd64.deb",
           "dest-filename": "bcompare.deb",
-          "sha256": "7643b9cb843a52ee71b6d9cb22ffa16efc28e1c5639ab3675dd0f4ef84d50184"
+          "sha256": "405124dcf88079951307458f874b617c438d37266ff2216bfb4128aa06f9b505"
         },
         {
           "type": "file",
