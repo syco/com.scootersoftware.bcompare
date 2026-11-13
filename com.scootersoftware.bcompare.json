@@ -37,7 +37,8 @@
       "name" : "uthash",
       "buildsystem" : "simple",
       "build-commands" : [
-        "install -D include/* /app/include"
+        "install -d /app/include",
+        "install -m644 include/* /app/include/"
       ],
       "sources" : [
         {
